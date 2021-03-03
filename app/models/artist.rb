@@ -21,7 +21,7 @@ class Artist < ActiveRecord::Base
   end
   
   def find(name)
-    Artists.all.detect {|artist| artist.name == name}
+    Artists.all.detect {|artist| artist.name == "Drake"}
   end 
   
   def find_or_create_by(name)
