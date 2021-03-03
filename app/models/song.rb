@@ -19,7 +19,7 @@ class Song < ActiveRecord::Base
   end
   
   def find(name)
-    songs.all.select {|song| song.name == name)
+    songs.all.select {|song| song.name == name}
   end 
   
   def find_or_create_by(name)
