@@ -17,7 +17,7 @@ class Song < ActiveRecord::Base
   end
   
   def create(name)
-    song = Song.new(name)
+    artist = Song.new(name)
     song.save
   end
   
