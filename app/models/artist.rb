@@ -15,5 +15,18 @@ class Artist < ActiveRecord::Base
     genres.count
   end
   
+  def create(name)
+    artist = Artist.new(name)
+    artist.save
+  end
+  
+  def find(name)
+    Artist.all.select {|song| song.name == name}
+  end 
+  
+  def find_or_create_by(name)
+    find(name) || create(name)
+  end
+  
   
 end
